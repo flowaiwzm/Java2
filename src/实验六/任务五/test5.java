@@ -8,8 +8,13 @@ class FontSet extends JFrame implements ItemListener, ActionListener{
 	JRadioButton jrbBlue = new JRadioButton("蓝色");		
 	private ButtonGroup bg = new ButtonGroup();
 	JCheckBox jcb1 = new JCheckBox("加粗");
-	JCheckBox jcb2 = new JCheckBox("倾斜");	
-	JComboBox listFont;
+	JCheckBox jcb2 = new JCheckBox("斜体");	
+	JCheckBox jcb3 = new JCheckBox("粗斜体");
+	JCheckBox jcb4 = new JCheckBox("普通");	
+	JComboBox listFont1;
+	JComboBox listFont2;
+	JComboBox listFont3;
+	JComboBox listFont4;
 	JList listSize;
 	JTextArea taDemo;
 	JButton btnExit,btnEdit;
@@ -20,8 +25,8 @@ class FontSet extends JFrame implements ItemListener, ActionListener{
 		
 		Box boxV1 = Box.createVerticalBox();
 		boxV1.add(new JLabel("请选择字体"));
-		listFont = new JComboBox(fontName);
-		boxV1.add(new JScrollPane(listFont));
+		listFont1 = new JComboBox(fontName);
+		boxV1.add(new JScrollPane(listFont1));
 		boxV1.add(Box.createVerticalStrut(155));
 				
 		Box boxV2 = Box.createVerticalBox();
@@ -37,6 +42,8 @@ class FontSet extends JFrame implements ItemListener, ActionListener{
 		boxV3.add(new JLabel("请选择字形"));		
 		boxV3.add(jcb1);
 		boxV3.add(jcb2);
+		boxV3.add(jcb3);
+		boxV3.add(jcb4);
 		boxV3.add(Box.createVerticalGlue());
 		
 		Box boxV4 = Box.createVerticalBox();		
@@ -113,7 +120,7 @@ class FontSet extends JFrame implements ItemListener, ActionListener{
 			if(jrbBlue.isSelected())
 				taDemo.setForeground(Color.BLUE);
 	
-			String strFont = (String)listFont.getSelectedItem();
+			String strFont = (String)listFont1.getSelectedItem();
 			Font ft = new Font(strFont,style,listSize.getSelectedIndex()+16);
 			taDemo.setFont(ft);
 		}
