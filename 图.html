@@ -1,14 +1,58 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let dataList = [
+                {
+                    title: '品牌鞋子，高品质低价入手',
+                    publishTime: 200,
+                },
+                {
+                    title: '不是很贵，但是很暖',
+                    publishTime: 100,
+                },
+                {
+                    title: '无法拒绝的美食，跟我一起吃吃',
+                    publishTime: 300,
+                },
+            ];
+
+            console.log('qianguyihao 排序前的数组：' + JSON.stringify(dataList));
+
+            // 将dataList 数组，按照 publishTime 字段，从小到大排序。（会改变原数组）
+            dataList.sort((a, b) => parseInt(a.publishTime) - parseInt(b.publishTime));
+
+            console.log('qianguyihao 排序后的数组：' + JSON.stringify(dataList));
+        </script>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title></title>
 </head>
 <body>
-    <img src="./images/1.png">
-    <img src="./images/2.png" alt="">
-    <img src="./images/3.png" alt="">
+	<!-- 单选框 -->
+	<div>Gendar:
+		<label><input type="radio" name="sex" value="男生">Female</label>
+		<label><input type="radio" name="sex" value="女生">Male</label>
+	</div>
+	<!-- 复选框 -->
+	<div>
+		爱好：
+		<label><input type="checkbox" name="like" value="0">音乐</label>
+		<label><input type="checkbox" name="like" value="1">旅游</label>
+	</div>
+ 
 </body>
 </html>
+ 
+ 
+ 
+ 
+ 
